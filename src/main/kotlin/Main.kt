@@ -117,28 +117,34 @@ private fun executeMenu(selectedMenu: Int, totalLine: Int, color: String) {
 
     when (selectedMenu) {
         1 -> {
-            val shape = Triangle(totalLine,color)
-            shape.printShape()
+            Triangle(totalLine, color).also {
+                it.printShape()
+            }
         }
         2 -> {
-            val shape = Triangle(totalLine,color)
-            shape.printFlipped()
+            Triangle(totalLine, color).also {
+                it.printFlipped()
+            }
         }
         3 -> {
-            val shape = Diamond(totalLine, color)
-            shape.printShape()
+            Diamond(totalLine, color).also {
+                it.printShape()
+            }
         }
         4 -> {
-            val shape = Cross(totalLine, color)
-            shape.printShape()
+            Cross(totalLine, color).also {
+                it.printShape()
+            }
         }
         5 -> {
-            val shape = Triangle(totalLine, color)
-            shape.printHollowed()
+            Triangle(totalLine, color).also {
+                it.printHollowed()
+            }
         }
         6 -> {
-            val shape = Triangle(totalLine, color)
-            shape.printFlippedHollowed()
+            Triangle(totalLine, color).also {
+                it.printFlippedHollowed()
+            }
         }
     }
     println("\nYay! Bentuk yang dipilih berhasil dicetak! q(≧▽≦q)\n")
